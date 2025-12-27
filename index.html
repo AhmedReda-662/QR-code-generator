@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/master.css" />
+    <title>qr-code-generator</title>
+  </head>
+  <body>
+    <main class="__container">
+      <div class="__app" id="app">
+        <div class="__logo">
+          <img src="./Logo.svg" alt="logo" />
+        </div>
+        <div class="__input_url" id="input_container">
+          <div class="__input_group">
+            <input
+              type="text"
+              class="__url_input"
+              placeholder="Enter an url"
+              name="inputURL"
+              id="inputURL"
+            />
+            <button class="__generate_btn" id="btn">QR code</button>
+          </div>
+        </div>
+        <div class="__loading __hide" id="loading">
+          Generating your QR code...
+        </div>
+      </div>
+      <div class="__qr-container __hide" id="qrcode_qoute">
+        <div class="__logo_qr">
+          <img src="./Logo.svg" alt="logo" />
+        </div>
+        <div class="__qr-qoute">
+          <div id="qrcode"></div>
+        </div>
+        <div class="__controles">
+          <a id="download_link" href="#" download="qrcode.png">
+            <button class="__download_btn" id="download-btn">
+              Download
+              <img src="./Load_circle_duotone.svg" alt="share" />
+            </button>
+          </a>
+          <button class="__copy_btn" id="copy-btn">
+            Share
+            <img src="./link_alt.svg" alt="link_alt" />
+          </button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </body>
+</html>
